@@ -124,7 +124,15 @@ Check if CodeDeploy agent is running:
 ```
 sudo service codedeploy-agent status
 ```
+Verify role:
+```
+curl http://169.254.169.254/latest/meta-data/iam/security-credentials/
+```
+Expected:
+```
+EC2CodeDeployRole
 
+```
 Location for CodeDeploy logs:
 ```
 /opt/codedeploy-agent/deployment-root/deployment-logs/codedeploy-agent-deployments.log
